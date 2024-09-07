@@ -49,22 +49,22 @@ export default function ThemeSelector(props: Omit<MenuProps, "closeOnItemClick">
             </Menu.Target>
             <Menu.Dropdown>
                 <Menu.Item onClick={() => setColorScheme("fire")} title="Fire">
-                    <IconFlame color={theme.colors.fire[6]}/>
+                    <IconFlame color={theme.colors.fire[6]} style={{float: "right"}}/>
                 </Menu.Item>
                 <Menu.Item onClick={() => setColorScheme("water")} title="Water">
-                    <IconDroplet color={theme.colors.water[6]}/>
+                    <IconDroplet color={theme.colors.water[6]} style={{float: "right"}}/>
                 </Menu.Item>
                 <Menu.Item onClick={() => setColorScheme("grass")} title="Grass">
-                    <IconLeaf color={theme.colors.grass[6]}/>
+                    <IconLeaf color={theme.colors.grass[6]} style={{float: "right"}}/>
                 </Menu.Item>
                 <Menu.Item onClick={() => setColorScheme("ghost")} title="Ghost">
-                <IconGhost2 color={theme.colors.ghost[6]}/>
+                <IconGhost2 color={theme.colors.ghost[6]} style={{float: "right"}}/>
                 </Menu.Item>
                 <Menu.Item onClick={() => setColorScheme("rock")} title="Rock">
-                    <IconDiamond color={theme.colors.rock[6]}/>
+                    <IconDiamond color={theme.colors.rock[6]} style={{float: "right"}}/>
                 </Menu.Item>
                 <Menu.Item onClick={() => setColorScheme("steel")} title="Steel">
-                    <IconShieldHalfFilled color={theme.colors.steel[6]}/>
+                    <IconShieldHalfFilled color={theme.colors.steel[6]} style={{float: "right"}}/>
                 </Menu.Item>
             </Menu.Dropdown>
         </Menu>
