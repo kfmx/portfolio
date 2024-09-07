@@ -49,8 +49,8 @@ function App() {
         </Group>
       </AppShell.Header>
       <AppShell.Navbar p="md" className={styles.navbar}>
-        <Button variant="subtle" leftSection={<IconHome/>}><Link to="/#home">Home</Link></Button>
-        <Button variant="subtle" leftSection={<IconHome/>}><Link to="/#carousel">Carousel</Link></Button>
+        <Button variant="subtle" leftSection={<IconHome/>}><Link to="/home">Home</Link></Button>
+        <Button variant="subtle" leftSection={<IconHome/>}><Link to="/carousel">Carousel</Link></Button>
         {navLinks.map(
           (navLink, i) => <NavLink
             key={i}
