@@ -1,6 +1,7 @@
 import './App.css'
 import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
+import styles from './Styles.module.css';
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { AppShell, Burger, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
@@ -21,7 +22,9 @@ function App() {
           breakpoint: 'sm',
           collapsed: { mobile: !opened, desktop: !opened },
         }}
-        padding="md">
+        padding="md"
+        className={styles.appShell}
+      >
         <AppShell.Header>
           <Group h="100%" px="md">
             <Burger

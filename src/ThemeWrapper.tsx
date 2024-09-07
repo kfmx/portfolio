@@ -1,6 +1,6 @@
 
 import { createTheme, MantineProvider } from '@mantine/core';
-import styles from './Element.module.css';
+import styles from './Styles.module.css';
 import { StrictMode, useEffect, useState } from 'react';
 import { useLocalStorage } from '@mantine/hooks';
 import { getLocalStorageColorScheme } from './helpers';
