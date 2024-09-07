@@ -1,0 +1,20 @@
+.actionIcon {
+    &:hover {
+        border-color: transparent;
+    }
+    &:focus:not(:focus-visible) {
+        outline: none;
+    }
+}
+
+.burger {
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+}
+
+.menuItem {
+    &:focus {
+      outline: none;
+    }
+}
