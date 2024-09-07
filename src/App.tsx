@@ -3,7 +3,7 @@ import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
 import styles from './Styles.module.css';
 import { Route, Routes, useLocation } from "react-router-dom";
-import { AppShell, Burger, Button, Group, NavLink } from '@mantine/core';
+import { AppShell, Burger, Button, Group, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import HomePage from "./pages/Home";
 import CarouselPage from "./pages/Carousel";
@@ -49,16 +49,16 @@ function App() {
         </Group>
       </AppShell.Header>
       <AppShell.Navbar p="md" className={styles.navbar}>
-        <Button variant="subtle" leftSection={<IconHome/>}><Link to="/home">Home</Link></Button>
-        <Button variant="subtle" leftSection={<IconHome/>}><Link to="/carousel">Carousel</Link></Button>
         {navLinks.map(
-          (navLink, i) => <NavLink
-            key={i}
-            href={"/portfolio#/" + navLink.pathname}
-            label={navLink.label}
-            leftSection={navLink.icon}
-            style={pathname.includes(navLink.pathname) ? {borderColor: "var(--mantine-primary-color-7)"} : {}}
-          />
+          (navLink, i) => (
+            <Link key={i} to={navLink.pathname} style={pathname.includes(navLink.pathname) ? {borderColor: "var(--mantine-primary-color-9)"} : {}}>
+              <Button fullWidth variant="subtle" leftSection={navLink.icon} justify="start">
+                <Text c="var(--mantine-color-text)">
+                  {navLink.label}
+                </Text>
+              </Button>
+            </Link>
+          )
         )}
       </AppShell.Navbar>
       <AppShell.Main>

@@ -1,5 +1,5 @@
 import { Carousel } from "@mantine/carousel"
-import { Image } from '@mantine/core';
+import { Image, Text } from '@mantine/core';
 
 const images = [
     'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-1.png',
@@ -18,7 +18,9 @@ export default function CarouselPage() {
     
       return (
         <>
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper luctus orci a pretium. Quisque quis posuere urna, at vulputate mauris. Aenean eu fermentum nisi, id molestie lacus. Fusce semper, massa consectetur consectetur faucibus, diam libero fringilla nibh, vulputate efficitur sapien metus a ipsum. Curabitur consequat, urna sed tristique euismod, erat magna rutrum tortor, eget rhoncus massa lacus sit amet purus. Pellentesque rutrum mattis eros vel facilisis. Donec consequat tortor dui, quis finibus metus dignissim vel. Nam nisi enim, facilisis nec eros ac, tempus porttitor turpis. Integer scelerisque elit ac massa cursus, quis semper lacus vehicula.</h2>
+            <Text size="xl">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper luctus orci a pretium. Quisque quis posuere urna, at vulputate mauris. Aenean eu fermentum nisi, id molestie lacus. Fusce semper, massa consectetur consectetur faucibus, diam libero fringilla nibh, vulputate efficitur sapien metus a ipsum. Curabitur consequat, urna sed tristique euismod, erat magna rutrum tortor, eget rhoncus massa lacus sit amet purus. Pellentesque rutrum mattis eros vel facilisis. Donec consequat tortor dui, quis finibus metus dignissim vel. Nam nisi enim, facilisis nec eros ac, tempus porttitor turpis. Integer scelerisque elit ac massa cursus, quis semper lacus vehicula.
+            </Text>
             <Carousel withIndicators withControls mt="auto" height={300} loop>{slides}</Carousel>
         </>
       )
