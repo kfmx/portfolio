@@ -22,3 +22,9 @@
 .appShell {
     --app-shell-border-color: var(--mantine-primary-color-9) !important;
 }
+
+.navbar {
+    a {
+        border-bottom: 1px solid transparent;
+    }
+}
