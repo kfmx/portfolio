@@ -42,6 +42,7 @@ export default function ThemeSelector(props: Omit<MenuProps, "closeOnItemClick">
                 <ActionIcon
                     variant='gradient'
                     gradient={{from: theme.colors[theme.primaryColor][3], to: theme.colors[theme.primaryColor][7]}}
+                    title="Change color scheme"
                     size="lg"
                 >
                     {icon}
