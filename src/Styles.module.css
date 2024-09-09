@@ -20,6 +20,7 @@
 }
 
 .appShell {
+    height: 100vh;
     --app-shell-border-color: var(--mantine-primary-color-9) !important;
 }
 
@@ -28,4 +29,26 @@
         border-bottom: 1px solid transparent;
         text-decoration: none;
     }
+}
+
+.card {
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-size: cover;
+    background-position: center;
+  }
+  
+.cardTitle {
+    font-weight: 900;
+    color: var(--mantine-color-text);
+    font-size: 32px;
+    cursor: default;
+}
+
+.cardLink {
+    position: absolute;
+    bottom: 3rem;
 }
