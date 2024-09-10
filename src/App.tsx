@@ -3,7 +3,7 @@ import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
 import styles from './Styles.module.css';
 import { Route, Routes, useLocation } from "react-router-dom";
-import { AppShell, Burger, Button, Center, Group, Stack, Text } from '@mantine/core';
+import { AppShell, Burger, Button, Center, Group, Stack, Text, useMantineColorScheme } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import HomePage from "./pages/Home";
 import ModeSelector from './components/ModeSelector';
@@ -12,16 +12,18 @@ import { IconBrowser, IconCode, IconDeviceGamepad2, IconHome, IconUserCircle } f
 import { Link } from 'react-router-dom';
 
 const navLinks: {pathname: string, label: string, icon: JSX.Element}[] = [
-  {pathname: "/home", label: "Home", icon: <IconHome/>},
-  {pathname: "/gamedesign", label: "Game Design", icon: <IconDeviceGamepad2/>},
-  {pathname: "/projectleading", label: "Project Leading", icon: <IconUserCircle/>},
-  {pathname: "/webprogramming", label: "Web Programming", icon: <IconBrowser/>},
-  {pathname: "/gameprogramming", label: "Game Programming", icon: <IconCode/>}
+  {pathname: "/home", label: "Home", icon: <IconHome color="var(--mantine-primary-color-6)"/>},
+  {pathname: "/gamedesign", label: "Game Design", icon: <IconDeviceGamepad2 color="var(--mantine-primary-color-6)"/>},
+  {pathname: "/projectleading", label: "Project Leading", icon: <IconUserCircle color="var(--mantine-primary-color-6)"/>},
+  {pathname: "/webprogramming", label: "Web Programming", icon: <IconBrowser color="var(--mantine-primary-color-6)"/>},
+  {pathname: "/gameprogramming", label: "Game Programming", icon: <IconCode color="var(--mantine-primary-color-6)"/>}
 ]
 
 export default function App() {
   const [opened, { toggle }] = useDisclosure();
   const { pathname } = useLocation();
+  const { colorScheme } = useMantineColorScheme();
+  const dark = colorScheme === 'dark';
 
   const navbarItems = navLinks.map(
     navLink => (
@@ -47,7 +49,7 @@ export default function App() {
       className={styles.appShell}
     >
 
-      <AppShell.Header>
+      <AppShell.Header bg={dark ? "var(--mantine-color-dark-6)" : "var(--mantine-primary-color-1)"}>
         <Group h="100%" px="md">
           <Burger
             opened={opened}
@@ -61,7 +63,7 @@ export default function App() {
         </Group>
       </AppShell.Header>
 
-      <AppShell.Navbar p="md" className={styles.navbar}>
+      <AppShell.Navbar p="md" className={styles.navbar} bg={dark ? "var(--mantine-color-dark-6)" : "var(--mantine-primary-color-1)"}>
         {navbarItems}
       </AppShell.Navbar>
 
