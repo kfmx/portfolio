@@ -4,7 +4,9 @@ import ThemeWrapper from './ThemeWrapper.tsx';
 import { HashRouter } from 'react-router-dom';
 import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
+// @ts-ignore
 import { messages as enMessages } from "./locales/en/messages";
+// @ts-ignore
 import { messages as seMessages } from "./locales/se/messages";
 import { getLocalStorageLocale } from './helpers.ts';
 
