@@ -1,9 +1,10 @@
 import styles from './../Styles.module.css';
 import { Carousel } from "@mantine/carousel"
-import { Button, Paper, Text, Title } from '@mantine/core';
+import { Button, Paper, Stack, Text, Title } from '@mantine/core';
 import { Link } from "react-router-dom";
 import Autoplay from 'embla-carousel-autoplay';
 import { useRef } from 'react';
+import { Trans } from '@lingui/macro';
 
 interface CardProps {
   image: string,
@@ -70,12 +71,28 @@ export default function HomePage() {
   
     return (
       <>
-        <Text size="xl">
-          Hello and welcome to my portfolio! I have worked professionally as both a programmer and project lead for 4+ years on a variety of projects, ranging from web development to game design. I have studied game design at a bachelors level, and am currently working on a solo game project. Please use the carousel below or the navigation menu in the header to read more about my work.
-        </Text>
-        <Text>
-          Thank you very much for visiting! :)
-        </Text>
+        <Stack mih="15rem">
+          <Text>
+            <Trans>
+              I am a web developer of 4 years with additional experience in game design, game programming, and project leading.
+            </Trans>
+          </Text>
+          <Text>
+            <Trans>
+            My professional projects have ranged from creating software for companies in industries such as construction, hotel, and digital events, to smaller scale iOS & Android apps, to acting as a design consultant for board games, to managing customers, teams of programmers, and finances.
+            </Trans>
+          </Text>
+          <Text>
+            <Trans>
+            In my free time I work on different game and programming projects - most recently my focus has been on bringing a large scale romhack to life.
+            </Trans>
+          </Text>
+          <Text>
+            <Trans>
+              Currently I am looking for work.
+            </Trans>
+          </Text>
+        </Stack>
         <Carousel
           slideGap={{ base: 'xl', sm: 2 }}
           loop

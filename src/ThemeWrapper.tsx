@@ -112,10 +112,10 @@ export default function ThemeWrapper({children}: {children: React.ReactNode}) {
   }, [colorScheme]);
 
   return (
+    <StrictMode>
       <MantineProvider theme={theme} defaultColorScheme="dark" withGlobalClasses withCssVariables>
-        <StrictMode>
-          {children}
-        </StrictMode>
+        {children}
       </MantineProvider>
+    </StrictMode>
   )
 }

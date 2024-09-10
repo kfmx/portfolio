@@ -6,6 +6,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { AppShell, Burger, Button, Center, Group, Stack, Text, useMantineColorScheme } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import HomePage from "./pages/Home";
+import LanguageSelector from './components/LanguageSelector';
 import ModeSelector from './components/ModeSelector';
 import ThemeSelector from './components/ThemeSelector';
 import { IconBrowser, IconCode, IconDeviceGamepad2, IconHome, IconUserCircle } from '@tabler/icons-react';
@@ -58,6 +59,7 @@ export default function App() {
             mr="auto"
             color="var(--mantine-primary-color-7)"
           />
+          <LanguageSelector/>
           <ThemeSelector/>
           <ModeSelector/>
         </Group>
@@ -71,7 +73,7 @@ export default function App() {
         style={{paddingInlineStart: "var(--app-shell-padding)"}} //if this is not set mantine will recalculate padding when navbar is open, causing main content to change size
       >
         <Center h="inherit">
-          <Stack h="inherit">
+          <Stack h="inherit" pt="2rem">
             <Routes>
               <Route path="/home" element={<HomePage/>}/>
               <Route path="/*" element={<HomePage/>}/>
