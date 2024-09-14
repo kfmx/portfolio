@@ -71,7 +71,7 @@ export default function HomePage() {
   
     return (
       <>
-        <Stack mih="15rem">
+        <Stack>
           <Text>
             <Trans>
               I am a web developer of 4 years with additional experience in game design, game programming, and project leading.
