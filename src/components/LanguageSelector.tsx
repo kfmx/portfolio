@@ -36,15 +36,15 @@ export default function LanguageSelector(props: Omit<MenuProps, "closeOnItemClic
                     title="Change language"
                     size="lg"
                 >
-                    <Box style={{backgroundImage: `url(${getFlagSvgFromLocale(locale)})`, borderRadius: "var(--ai-radius, var(--mantine-radius-default))"}} w="2rem" h="2rem"/>
+                    <Box style={{backgroundImage: `url("${getFlagSvgFromLocale(locale)}")`, borderRadius: "var(--ai-radius, var(--mantine-radius-default))"}} w="2rem" h="2rem"/>
                 </ActionIcon>
             </Menu.Target>
             <Menu.Dropdown>
                 <Menu.Item onClick={() => setLocale("en")} title="English">
-                    <Box style={{backgroundImage: `url(${GBFlagSvg})`, borderRadius: "var(--ai-radius, var(--mantine-radius-default))"}} w="2rem" h="2rem"/>
+                    <Box style={{backgroundImage: `url("${GBFlagSvg}")`, borderRadius: "var(--ai-radius, var(--mantine-radius-default))"}} w="2rem" h="2rem"/>
                 </Menu.Item>
                 <Menu.Item onClick={() => setLocale("se")} title="Swedish">
-                    <Box style={{backgroundImage: `url(${SEFlagSvg})`, borderRadius: "var(--ai-radius, var(--mantine-radius-default))"}} w="2rem" h="2rem"/>
+                    <Box style={{backgroundImage: `url("${SEFlagSvg}")`, borderRadius: "var(--ai-radius, var(--mantine-radius-default))"}} w="2rem" h="2rem"/>
                 </Menu.Item>
             </Menu.Dropdown>
         </Menu>
