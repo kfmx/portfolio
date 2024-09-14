@@ -3,8 +3,8 @@ import { useLocalStorage } from "@mantine/hooks";
 import { useEffect} from "react";
 import { i18n } from "@lingui/core";
 import { getLocalStorageLocale } from "../helpers";
-import GBFlagSvg from "./../assets/gb.svg"
-import SEFlagSvg from "./../assets/se.svg"
+import GBFlagSvg from "./../gb.svg"
+import SEFlagSvg from "./../se.svg"
 
 function getFlagSvgFromLocale(locale: string) {
     switch(locale) {
