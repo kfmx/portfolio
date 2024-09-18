@@ -3,6 +3,7 @@ import { useLocalStorage } from "@mantine/hooks";
 import { IconDiamond, IconDroplet, IconFlame, IconGhost2, IconLeaf, IconShieldHalfFilled } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 import { getLocalStorageColorScheme } from "../helpers";
+import { base } from "./../../config";
 
 function getIconFromColorScheme(colorScheme: string): JSX.Element {
 
@@ -24,6 +25,13 @@ function getIconFromColorScheme(colorScheme: string): JSX.Element {
     }
 }
 
+function setFavicon(colorScheme: string) {
+    let link = document.querySelector<HTMLLinkElement>("link[rel~='icon']");
+    if (link) {
+        link.href = `${base}/favicon_${colorScheme}.ico`;
+    }
+}
+
 export default function ThemeSelector(props: Omit<MenuProps, "closeOnItemClick">) {
     const theme = useMantineTheme();
     const [colorScheme, setColorScheme] = useLocalStorage({
@@ -34,6 +42,7 @@ export default function ThemeSelector(props: Omit<MenuProps, "closeOnItemClick">
 
     useEffect(() => {
         setIcon(getIconFromColorScheme(colorScheme));
+        setFavicon(colorScheme);
     }, [colorScheme]);
 
     return (

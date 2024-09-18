@@ -79,12 +79,12 @@ export default function HomePage() {
           </Text>
           <Text>
             <Trans>
-            My professional projects have ranged from creating software for companies in industries such as construction, hotel, and digital events, to smaller scale iOS & Android apps, to acting as a design consultant for board games, to managing customers, teams of programmers, and finances.
+              My professional projects have ranged from creating software for companies in industries such as construction, hotel, and digital events, to smaller scale iOS & Android apps, to acting as a design consultant for board games, to managing customers, teams of programmers, and finances.
             </Trans>
           </Text>
           <Text>
             <Trans>
-            In my free time I work on different game and programming projects - most recently my focus has been on bringing a large scale romhack to life.
+              In my free time I work on different game and programming projects - most recently my focus has been on bringing a large scale romhack to life.
             </Trans>
           </Text>
           <Text>
